@@ -5,13 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <title>Mining</title>
   </head>
   <body>
     <main class="miner relative">
       <div
-        class="bg-[#6A2849] w-96 flex flex-col justify-center items-center text-center p-4 gap-2 absolute bottom-0 left-0 md:bottom-[220px] md:left-[240px] lg:bottom-[220px] lg:left-[250px] xl:bottom-[180px] xl:left-[270px] rounded-lg"
+        class="bg-[#6A2849] w-96 flex flex-col justify-center items-center text-center p-4 gap-2 absolute bottom-0 left-0 md:bottom-[160px] md:left-[240px] lg:bottom-[160px] lg:left-[250px] xl:bottom-[130px] xl:left-[280px] rounded-lg"
       >
         <h1 class="uppercase text-3xl font-semibold text-white">Coming Soon</h1>
         <div class="flex gap-2">
@@ -43,6 +52,25 @@
             <p class="uppercase">seconds</p>
           </div>
         </div>
+        <!-- social media  -->
+        <div class="mt-2 flex gap-4">
+          <a
+            class="bg-[#0978C5] w-12 h-12 rounded-full flex items-center justify-center"
+            href="#"
+          >
+            <i class="fa-brands fa-twitter text-3xl text-white"></i
+          ></a>
+          <a
+            class="bg-[#0978C5] w-12 h-12 rounded-full flex items-center justify-center"
+            href="#"
+            ><i class="fa-brands fa-telegram text-3xl text-white"></i
+          ></a>
+          <a
+            class="bg-[#0978C5] w-12 h-12 rounded-full flex items-center justify-center"
+            href="#"
+            ><i class="fa-brands fa-discord text-3xl text-white"></i
+          ></a>
+        </div>
       </div>
     </main>
 
@@ -66,16 +94,6 @@
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        // Output the result in an element with id="demo"
-        // document.getElementById("demo").innerHTML = `
-        // <div>
-        //     <div style="padding:10px ">
-        //         ${days}
-        //         </div>
-        //        + "d " + hours + "h " + minutes + "m " + seconds + "s "
-
-        // </div>
-        // `;
         document.getElementById("days").innerText = days;
         document.getElementById("hours").innerText = hours;
         document.getElementById("minutes").innerText = minutes;
